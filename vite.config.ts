@@ -4,7 +4,7 @@ import path from 'path';
 import {defineConfig} from 'vite';
 
 export default defineConfig(({ command }) => {
-  const base = command === 'build' ? '/portfolio/' : '/';
+  const base = command === 'build' ? './' : '/';
   
   return {
     plugins: [react(), tailwindcss()],
@@ -21,6 +21,9 @@ export default defineConfig(({ command }) => {
       rollupOptions: {
         output: {
           manualChunks: undefined,
+          entryFileNames: 'assets/[name]-[hash].js',
+          chunkFileNames: 'assets/[name]-[hash].js',
+          assetFileNames: 'assets/[name]-[hash].[ext]'
         },
       },
     },
