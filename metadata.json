@@ -1,0 +1,6 @@
+{
+  "name": "Premium Portfolio",
+  "description": "A high-end, interactive, and visually stunning personal portfolio featuring bento grids, split-section showcases, and elegant transitions for a tech-focused MIS and Game Developer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

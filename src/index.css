@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,600&family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Noto Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-title: "Inter", "Noto Sans", "Space Grotesk", sans-serif;
+  --font-serif: "Playfair Display", "Noto Sans", serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-bg-primary: #000000;
+  --color-bg-secondary: #0a0a0a;
+  --color-glass-surface: rgba(255, 255, 255, 0.015);
+  --color-border-line: rgba(255, 255, 255, 0.08);
+  --color-neon-blue: #ffffff;
+  --color-neon-purple: #ffffff;
+  
+  --shadow-primary: 0 10px 40px rgba(0,0,0,0.6);
+  --shadow-glow-blue: 0 0 24px rgba(255,255,255,0.08);
+  --shadow-glow-purple: 0 0 28px rgba(255,255,255,0.08);
+  
+  --radius-bento: 24px;
+  --radius-dashboard: 28px;
+  --radius-hero-btn: 999px;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+/* Liquid Glass Component Styles */
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.015);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(8px);
+  border: none;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.12) 20%,
+    transparent 40%,
+    transparent 60%,
+    rgba(255, 255, 255, 0.12) 80%,
+    rgba(255, 255, 255, 0.4) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.liquid-glass-strong {
+  background: rgba(255, 255, 255, 0.04);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(50px);
+  border: none;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-glass-strong::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.2) 20%,
+    transparent 40%,
+    transparent 60%,
+    rgba(255, 255, 255, 0.2) 80%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Subtle fade-rise animation for elegant entries */
+@keyframes fade-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-rise {
+  animation: fade-rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom scrollbar for desktop showcase */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Image Utilities */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Prevent horizontal scroll on mobile */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Responsive container adjustments */
+@media (max-width: 640px) {
+  .liquid-glass, .liquid-glass-strong {
+    backdrop-filter: blur(12px);
+  }
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 768px) {
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Responsive text scaling */
+@media (max-width: 640px) {
+  h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  
+  h2 {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+}
+
+/* Hide scrollbar for horizontal scroll containers on mobile */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
