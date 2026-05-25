@@ -7,6 +7,13 @@ import { createContext, useContext, useState, ReactNode, useEffect } from 'react
 import { portfolioData } from '../data';
 import { ProjectItem, WorkExpItem, EducationItem, ActivityCertificateItem } from '../types';
 
+// Project images imports
+import PROJ_UNITY_IMG from '../assets/images/unity_game_scene_1779545276227.png';
+import PROJ_DJANGO_IMG from '../assets/images/proj_django.png';
+import PROJ_DESIGN_1_IMG from '../assets/images/proj_design_1.jpg';
+import PROJ_DESIGN_2_IMG from '../assets/images/proj_design_2.png';
+import PROJ_DESIGN_3_IMG from '../assets/images/proj_design_3.png';
+
 export type Language = 'en' | 'vi';
 
 // Detailed translation assets for portfolioData
@@ -113,7 +120,7 @@ const projectListVi = [
     description: "Một tựa game đi cảnh 2D phong cách arcade cổ điển nhằm học hỏi kiến thức cơ bản về Unity, động học chuyển động mượt mà (nhảy, trượt tường) và thiết kế mỹ thuật nhất quán.",
     longDescription: "Thiết kế ý tưởng trò chơi hoàn toàn từ đầu, bao gồm cả thiết kế nhân vật và tài nguyên nền gốc để tạo phong cách thị giác hài hòa nhất thống. Lập trình các trạng thái chuyển động mượt mà cho nhân vật (đi bộ, chạy, nhảy cao với cơ chế nhảy kép và lực trượt tường vật lý phản hồi). Xây dựng hệ thống điểm lưu checkpoint để hồi sinh, quản lý lượng máu nhân vật, các nền tảng chuyển động động học và các tập lệnh C# tương tác với hệ thống Rigidbody2D và Collider2D.",
     technologies: ["Unity 2D", "Lập trình C#", "Vật lý Động học", "Rigidbody2D", "Collider2D"],
-    mockupUrl: "/src/assets/images/unity_game_scene_1779545276227.png",
+    mockupUrl: PROJ_UNITY_IMG,
     githubUrl: "https://github.com/tooru352/GameLearning.git",
     period: "05/2026 - Hiện tại",
     category: "game"
@@ -125,7 +132,7 @@ const projectListVi = [
     description: "Cổng thông tin web tương tác phân quyền mạnh mẽ kế thừa kiến trúc Django MVC hỗ trợ chia sẻ hình ảnh phong phú, định danh tài khoản an toàn.",
     longDescription: "Đảm nhận thiết kế chính cho Phân hệ Quản lý Bài đăng (Post Management Module). Tạo lập giải pháp website cộng đồng mượt mà. Lập trình vòng đời tương tác nội dung (thao tác đăng tải, chỉnh sửa, xóa tin) liên kết ổ lưu trữ phân bổ thông minh. Hỗ trợ hiển thị bảng tin với cơ chế đăng tải nhiều hình ảnh đồng thời, quản lý cấu hình và kiểm soát phân quyền thành viên. Tận dụng SQLite DB cùng Django ORM để tối ưu hóa truy vấn bài đăng hiệu quả.",
     technologies: ["Django", "Python", "SQLite", "Django ORM", "REST API", "Kiến trúc MVC"],
-    mockupUrl: "/src/assets/images/proj_django.png",
+    mockupUrl: PROJ_DJANGO_IMG,
     githubUrl: "https://github.com/tooru352/NHOM2_LTW_49k14.1.git",
     period: "03/2026 - 05/2026",
     category: "web"
@@ -149,7 +156,7 @@ const projectListVi = [
     description: "Dự án truyền thông sáng tạo cá nhân tập trung vào nghệ thuật kể chuyện, thiết kế hình ảnh và phát triển nhân vật, kết hợp nhiếp ảnh và đồ họa số nhằm mang đến trải nghiệm nghệ thuật đậm chất điện ảnh.",
     longDescription: "Xây dựng cốt truyện và ý tưởng sáng tạo nghệ thuật. Viết kịch bản kể chuyện và biên soạn nội dung dự án. Thiết kế tạo hình nhân vật và định hướng mỹ thuật. Chỉ đạo nhiếp ảnh và bố cục khuôn hình. Chỉnh sửa hậu kỳ hình ảnh và thiết kế tài nguyên đồ họa hoàn chỉnh.",
     technologies: ["Adobe Photoshop", "Adobe Illustrator", "Adobe Lightroom", "Bảng vẽ Kỹ thuật số", "Thiết kế Nhân vật", "Nghệ thuật Kể chuyện", "Sáng tạo Nội dung"],
-    mockupUrl: "/src/assets/images/proj_design_1.jpg",
+    mockupUrl: PROJ_DESIGN_1_IMG,
     liveUrl: "https://www.facebook.com/share/p/18dVLQS7kS/",
     period: "25/10/2024 – 28/10/2024",
     category: "design"
@@ -161,7 +168,7 @@ const projectListVi = [
     description: "Một dự án sáng tạo cá nhân tập trung vào câu chuyện truyền động lực và cảm xúc thông qua nhiếp ảnh nghệ thuật dưới góc nhìn điện ảnh cùng thiết kế đồ họa sâu lắng.",
     longDescription: "Viết kịch bản dẫn dắt câu chuyện chân thực và trực tiếp định hướng nội dung dự án. Phát triển ý tưởng sáng tạo và bộ ngôn ngữ hình ảnh. Tổ chức thiết lập bố cục không gian, góc chụp và tạo hình mẫu. Chỉnh sửa hiệu ứng màu sắc ảnh và thiết kế đồ thị chữ nghệ thuật.",
     technologies: ["Adobe Photoshop", "Adobe Illustrator", "Adobe Lightroom", "Bảng vẽ Kỹ thuật số", "Nhiếp ảnh & Hậu kỳ", "Nghệ thuật Kể chuyện", "Sáng tạo Nội dung"],
-    mockupUrl: "/src/assets/images/proj_design_2.png",
+    mockupUrl: PROJ_DESIGN_2_IMG,
     liveUrl: "https://www.facebook.com/share/p/18YYauvYaK/",
     period: "20/06/2025 – 23/06/2025",
     category: "design"
@@ -173,7 +180,7 @@ const projectListVi = [
     description: "Dự án truyền thông sáng tạo khám phá các khía cạnh đa chiều của trải nghiệm sống thông qua nhiếp ảnh điện ảnh, minh họa đồ họa số và kịch bản cốt truyện giàu chiều sâu.",
     longDescription: "Phát triển tuyến cốt truyện hoàn chỉnh và ý tưởng nghệ thuật cốt lõi. Biên soạn kịch bản nội dung độc thoại nội tâm. Thiết kế biểu trưng đồ họa và phong cách mỹ thuật tổng thể. Định hướng góc chụp sáng tạo tận dụng tương phản ánh sáng. Thiết kế tài nguyên minh họa số và biên tập hình ảnh hậu kỳ.",
     technologies: ["Adobe Photoshop", "Adobe Illustrator", "Adobe Lightroom", "Bảng vẽ Kỹ thuật số", "Thiết kế Nhân vật", "Nghệ thuật Kể chuyện", "Sáng tạo Nội dung"],
-    mockupUrl: "/src/assets/images/proj_design_3.png",
+    mockupUrl: PROJ_DESIGN_3_IMG,
     liveUrl: "https://www.facebook.com/share/p/1DGFztu8MW/",
     period: "16/10/2025 – 19/10/2025",
     category: "design"

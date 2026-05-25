@@ -5,6 +5,13 @@
 
 import { SectionContent, SkillItem, ProjectItem, WorkExpItem, EducationItem, ActivityCertificateItem } from './types';
 
+// Project images imports
+import PROJ_UNITY_IMG from './assets/images/unity_game_scene_1779545276227.png';
+import PROJ_DJANGO_IMG from './assets/images/proj_django.png';
+import PROJ_DESIGN_1_IMG from './assets/images/proj_design_1.jpg';
+import PROJ_DESIGN_2_IMG from './assets/images/proj_design_2.png';
+import PROJ_DESIGN_3_IMG from './assets/images/proj_design_3.png';
+
 export const portfolioData = {
   s1: {
     title: "DOAN XUAN TOAN",
@@ -108,7 +115,7 @@ export const portfolioData = {
       description: "An arcade-style 2D platformer designed to learn Unity basics, fluid player kinematics (jump, wall slide), and cohesive art design.",
       longDescription: "Designed the game concept completely from scratch, including custom character layout and background assets to construct a unified aesthetic theme. Programmed smooth player states (basic walking, running, vertical jumping with double-jump triggers, and reactive wall-slide physics). Structured a custom checkpoint mechanics for player respawns, health tracking, kinematic moving surfaces, and basic camera-target follow configurations using C# scripting APIs (Rigidbody2D, Collider2D, triggers).",
       technologies: ["Unity 2D", "C# Scripting", "Kinematic Physics", "Rigidbody2D", "Collider2D"],
-      mockupUrl: "/src/assets/images/unity_game_scene_1779545276227.png",
+      mockupUrl: PROJ_UNITY_IMG,
       githubUrl: "https://github.com/tooru352/GameLearning.git",
       period: "05/2026 - Present",
       category: "game"
@@ -120,7 +127,7 @@ export const portfolioData = {
       description: "A secure web portal built using Django support multipart image uploads, user credentials, and active group feeds.",
       longDescription: "Took lead responsibility for the Post Management Module. Built a responsive web community portal using Django MVC architecture. Engineered smooth post lifecycle (CRUD actions) mapped with date-partitioned file storage. Enabled group feeds with secure multi-image uploads, profiles management, and user permissions. Implemented Django database ORM layered over SQLite for robust query execution and quick response delivery.",
       technologies: ["Django", "Python", "SQLite", "Django ORM", "REST API", "MVC Pattern"],
-      mockupUrl: "/src/assets/images/proj_django.png",
+      mockupUrl: PROJ_DJANGO_IMG,
       githubUrl: "https://github.com/tooru352/NHOM2_LTW_49k14.1.git",
       period: "03/2026 - 05/2026",
       category: "web"
@@ -144,7 +151,7 @@ export const portfolioData = {
       description: "A personal creative media project focused on storytelling, visual design, and character development, combining photography, digital editing, and graphic design to create a cinematic and artistic experience.",
       longDescription: "Developed the storyline and creative concept. Wrote storytelling scripts and project content. Designed characters and visual concepts. Managed photography and visual composition. Edited photos and designed project visuals.",
       technologies: ["Adobe Photoshop", "Adobe Illustrator", "Adobe Lightroom", "Digital Drawing Tablet", "Character Design", "Creative Storytelling", "Visual Content Creation"],
-      mockupUrl: "/src/assets/images/proj_design_1.jpg",
+      mockupUrl: PROJ_DESIGN_1_IMG,
       liveUrl: "https://www.facebook.com/share/p/18dVLQS7kS/",
       period: "25/10/2024 – 28/10/2024",
       category: "design"
@@ -156,7 +163,7 @@ export const portfolioData = {
       description: "A personal creative project focused on emotional storytelling and visual expression through photography and graphic design, delivering motivational messages through cinematic visual composition.",
       longDescription: "Wrote storytelling scripts and project content. Developed creative concepts and visual direction. Managed photography and scene composition. Edited photos and designed visual assets.",
       technologies: ["Adobe Photoshop", "Adobe Illustrator", "Adobe Lightroom", "Digital Drawing Tablet", "Photography & Photo Editing", "Creative Storytelling", "Visual Content Creation"],
-      mockupUrl: "/src/assets/images/proj_design_2.png",
+      mockupUrl: PROJ_DESIGN_2_IMG,
       liveUrl: "https://www.facebook.com/share/p/18YYauvYaK/",
       period: "20/06/2025 – 23/06/2025",
       category: "design"
@@ -168,7 +175,7 @@ export const portfolioData = {
       description: "A personal creative media project focused on visual storytelling and emotional expression through photography and graphic design, exploring different perspectives through cinematic visuals.",
       longDescription: "Developed the storyline and creative concept. Wrote storytelling scripts and project content. Designed visual concepts and project aesthetics. Managed photography and visual composition. Edited photos and designed visual assets.",
       technologies: ["Adobe Photoshop", "Adobe Illustrator", "Adobe Lightroom", "Digital Drawing Tablet", "Character Design", "Creative Storytelling", "Visual Content Creation"],
-      mockupUrl: "/src/assets/images/proj_design_3.png",
+      mockupUrl: PROJ_DESIGN_3_IMG,
       liveUrl: "https://www.facebook.com/share/p/1DGFztu8MW/",
       period: "16/10/2025 – 19/10/2025",
       category: "design"
