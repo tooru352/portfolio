@@ -3,7 +3,9 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import {defineConfig} from 'vite';
 
-export default defineConfig(() => {
+export default defineConfig(({ command }) => {
+  const base = command === 'build' ? '/portfolio/' : '/';
+  
   return {
     plugins: [react(), tailwindcss()],
     resolve: {
@@ -11,7 +13,7 @@ export default defineConfig(() => {
         '@': path.resolve(__dirname, '.'),
       },
     },
-    base: '/portfolio/',
+    base,
     build: {
       outDir: 'dist',
       assetsDir: 'assets',
